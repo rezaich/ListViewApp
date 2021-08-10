@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Learn ListView</string>
+    <string name="name_Iem">nama Iem</string>
+    <string name="lorem">lorem</string>
+
+    <string-array name="data_name">
+        <item>ibasso</item>
+        <item>trn</item>
+        <item>bloon</item>
+    </string-array>
+
+    <string-array name="data_price">
+
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+    </string-array>
+
+    <array name="data_photo">
+        <item>@drawable/ibassoit01</item>
+        <item>@drawable/trnv90</item>
+        <item>@drawable/blo03</item>
+    </array>
+</resources>
