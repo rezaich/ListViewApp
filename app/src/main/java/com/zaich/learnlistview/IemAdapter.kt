@@ -8,6 +8,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.zaich.learnlistview.databinding.ItemIemBinding
 import de.hdodenhof.circleimageview.CircleImageView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder as ViewHolder1
 
@@ -63,22 +64,24 @@ class IemAdapter internal constructor(private val context: Context):BaseAdapter(
 
     }
 
-    private inner class ViewHolder internal constructor(view: View) {
-        private val txtName: TextView = view.findViewById(R.id.txt_name)
-        private val txtDescription: TextView = view.findViewById(R.id.txt_description)
+    private inner class ViewHolder internal constructor(private val view: View) {
+//        private val txtName: TextView = view.findViewById(R.id.txt_name)
+//        private val txtDescription: TextView = view.findViewById(R.id.txt_description)
+
+        private val binding = ItemIemBinding.bind(view)
 
         /**
          *    photo kotak / normal
          *    private val imgPhoto: ImageView = view.findViewById(R.id.img_photo)
          */
 
-        //circle photo
-        private val imgPhoto: CircleImageView = view.findViewById(R.id.img_photo)
+//        //circle photo
+//        private val imgPhoto: CircleImageView = view.findViewById(R.id.img_photo)
 
         internal fun bind(iem:IEM) {
-            txtName.text = iem.name
-            txtDescription.text = iem.price
-            imgPhoto.setImageResource(iem.photo)
+            binding.txtName.text = iem.name
+            binding.txtDescription.text = iem.price
+            binding.imgPhoto.setImageResource(iem.photo)
         }
     }
 }
